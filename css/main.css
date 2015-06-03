@@ -1,0 +1,181 @@
+*
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html
+{
+    font-size: 100%;
+}
+
+body
+{
+    margin: 0;
+    font-family: verdana;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+/*#### HEADER AREA ###########################################################*/
+
+header
+{
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+}
+
+header #title
+{
+    font-weight: normal;
+    padding-left: 1rem;
+}
+
+header #title a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*#### NAVIGATION AREA #######################################################*/
+
+body.nav-active #toggle-nav
+{
+	border-color: #fff;
+}
+
+body.nav-active #toggle-nav > span
+{
+    background-color: #fff;
+}
+
+body.nav-active nav#nav
+{
+    top: -25vh;
+}
+
+#toggle-nav
+{
+	border: 0.125rem solid #000;
+	cursor: pointer;
+	margin: 1rem;
+	overflow: hidden;
+	padding: 0.375rem;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 2.5rem;
+	z-index: 9999;
+
+    transition: 1s border-color;
+    -moz-transition: 1s border-color;
+    -webkit-transition: 1s border-color;
+}
+
+#toggle-nav > span
+{
+    background-color: #000;
+    display: block;
+    height: 0.125rem;
+    width: 100%;
+
+    transition: 1s background-color;
+    -moz-transition: 1s background-color;
+    -webkit-transition: 1s background-color;
+}
+
+#toggle-nav > span:first-child + span
+{
+    margin: 0.3125rem 0;
+}
+
+nav#nav
+{
+	background-color: #232323;
+	color: #fff;
+	display: table;
+	height: 150vh;
+	left: 0;
+	position: fixed;
+    text-align: center;
+	top: -175vh;
+	width: 100%;
+	z-index: 9000;
+
+    transition: 0.25s top;
+    -moz-transition: 0.25s top;
+    -webkit-transition: 0.25s top;
+}
+
+nav#nav .nav-wrapper
+{
+    display: table-cell;
+    overflow: auto;
+    vertical-align: middle;
+}
+
+nav#nav ul
+{
+    display: block;
+    margin: 0;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+nav#nav ul li
+{
+    line-height: 4rem;
+}
+
+nav#nav ul li a
+{
+    color: #fff;
+    display: block;
+    font-size: 1.5rem;
+}
+
+nav#nav ul li a:hover, nav#nav ul li a:active
+{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/*#### MAIN AREA #############################################################*/
+
+section
+{
+    width: 100%;
+}
+
+#home
+{
+    background: url('../images/hero.jpg');
+    background-size: cover;
+    min-height: 40rem;
+}
+
+
+/*#### FOOTER AREA ###########################################################*/
+
+
+
+
+@media all and (min-width: 50rem) {
+    .wrapper
+    {
+        margin: auto;
+        max-width: 50rem;
+    }
+}
